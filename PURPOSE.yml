@@ -1,0 +1,30 @@
+# PURPOSE.yml — optional. This repository is adopted by its LICENSE file and by nothing else, so
+# deleting this file changes nothing about adoption, listing, allocation or certificates.
+#
+# What it is for: overriding the published defaults. With no manifest those defaults are
+#   weight class          standard (a manifest can never set it; it is a dashboard decision)
+#   allocation defaults   the Association default, until an admin sets a project default
+#   attribution           none - the published formula, verbatim
+#   successor             none
+#
+# Every field below is optional and every one of them has a published bound. A field outside its
+# bound is ignored and its default applies - the manifest as a whole is never rejected for it.
+schema: 1
+
+# license:
+#   id: <the identifier the project believes it carries>
+#
+# DELIBERATELY ABSENT, and this is not an oversight. `license.id` must equal the identifier
+# detected in the LICENSE file, and the final identifier string has not been decided. Writing a
+# plausible one here would make the first parse of this file record a licence mismatch against the
+# repository's own LICENSE - caused by the wizard that wrote it. When the identifier is published,
+# adding one line here is all it takes, and nothing depends on it in the meantime.
+
+# allocation:
+#   defaults: [<category slug>, <category slug>]   # published category slugs only; free text is impossible
+
+# attribution:
+#   exclude_paths: ["vendor/**"]    # up to 100 globs
+#   exclude_users: ["release-bot"]  # up to 50 logins
+#   weights:
+#     - { path: "docs/**", class: docs }   # class is code | docs | excluded, never a new multiplier
